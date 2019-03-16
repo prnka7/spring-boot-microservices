@@ -1,0 +1,5 @@
+package io.java.movieinfoservice;
+
+public class MovieResource {
+
+}
