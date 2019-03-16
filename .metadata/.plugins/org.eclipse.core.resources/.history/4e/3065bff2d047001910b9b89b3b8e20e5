@@ -1,0 +1,5 @@
+package io.java.moviecatalogservice.models;
+
+public class CatalogItem {
+
+}

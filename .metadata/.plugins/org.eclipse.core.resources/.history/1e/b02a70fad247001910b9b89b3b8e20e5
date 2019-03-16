@@ -1,0 +1,21 @@
+package io.java.moviecatalogservice;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.java.moviecatalogservice.models.CatalogItem;
+
+@RestController
+@RequestMapping("/catalog")
+public class MovieCatalogResource {
+	public List<CatalogItem> getCatalog(String userId)
+	{
+		return Collections.singletonList(
+				new CatalogItem(name:"URI",desc:"Test",rating:4)
+				);
+
+	}
+}

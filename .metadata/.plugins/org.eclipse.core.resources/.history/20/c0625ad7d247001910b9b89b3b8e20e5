@@ -1,0 +1,16 @@
+package io.java.moviecatalogservice;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import io.java.moviecatalogservice.models.CatalogItem;
+
+@RestController
+public class MovieCatalogResource {
+	public List<CatalogItem> getCatalog(String userId)
+	{
+		return null;
+		
+	}
+}

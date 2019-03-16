@@ -1,0 +1,7 @@
+server.port=8020
+spring.datasource.url= jdbc:postgresql://localhost:5432/springbootdb 
+spring.datasource.username=postgres spring.datasource.password=admin   
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.show-sql=true
+spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
