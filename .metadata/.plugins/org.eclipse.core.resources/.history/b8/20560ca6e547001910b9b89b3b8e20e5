@@ -1,5 +1,6 @@
 package io.java.moviecatalogservice;
 
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,19 +17,19 @@ import io.java.moviecatalogservice.models.Rating;
 @RestController
 @RequestMapping("/catalog")
 public class MovieCatalogResource {
-
+	
 	@RequestMapping("{userId}")
 	public List<CatalogItem> getCatalog(@PathVariable("userId")String userId)
 	{
 		RestTemplate restTemplate=new RestTemplate();
+		restTemplate.getForObject("http://localhost:8082/movies/foo",Movie.class);
 		List<Rating> ratings=Arrays.asList(
 				new Rating("1234",4),
 				new Rating("1235",5)
 				);
 		return ratings.stream().map(rating->{
-		Movie movie=restTemplate.getForObject("http://localhost:8082/movies/"+rating.getMovieId(),Movie.class);		
-		return new CatalogItem(movie.getName(),"DESC",rating.getRating());
-	})
+			
+		new CatalogItem("URI","Test",4)}
 			.collect(Collectors.toList());
 		
 	}
